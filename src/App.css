@@ -1,23 +1,17 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+body {
+  font-family: "Roboto Condensed" sans-serif;
+  background-color: var(--background) !important;
+}
+:root {
+  --white: #ffffff;
+  --light-blue: #c1bcff;
+  --dark-blue: #9189fc;
+  --background: #f2f2f2;
+  --black: #000;
+}
+/* .App {
   background-color: #f2f2f2;
-}
-.navbar {
-  text-decoration: none;
-  /* display: flex; */
-}
-.brand {
-  font-size: 48px;
-}
-.tabs-button {
-  border-style: none;
-  margin-left: 30px;
-}
-.empty-box {
-  background-color: #c1bcff;
-  position: relative;
-  top: 16px;
-  width: 600px;
-  height: 480px;
 }
 .profile-container {
   position: absolute;
@@ -34,4 +28,44 @@
   background-color: #c1bcff;
   width: 250px;
   height: 360px;
+} */
+
+/* ..........Navbar.......... */
+
+.brand-image {
+  width: 20rem;
+}
+
+/* ..........Menu Links.......... */
+nav a.nav-link {
+  cursor: pointer;
+  letter-spacing: 0.03rem;
+}
+nav ul li {
+  text-transform: uppercase;
+}
+.navbar-nav > li > a {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  color: var(--dark-blue) !important;
+  border-bottom: 0.1875rem solid var(--background);
+}
+.navbar-brand {
+  max-width: 17rem;
+  padding: 0 !important;
+  height: 4rem !important;
+}
+.navbar-nav > li > a.active,
+.navbar-nav > li > a.active:focus {
+  border-bottom: 0.1875rem solid var(--dark-blue);
+}
+.navbar-nav > li > a:hover {
+  border-bottom: 0.1875rem solid var(--dark-blue);
+}
+.navbar-toggler {
+  border: 2px solid var(--dark-blue) !important;
+}
+
+.hamburger {
+  color: var(--dark-blue);
 }
