@@ -1,43 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+html {
+  scroll-behavior: smooth;
+}
 body {
-  font-family: "Roboto Condensed" sans-serif;
+  font-family: "Roboto Condensed", sans-serif;
   background-color: var(--background) !important;
+}
+.section {
 }
 :root {
   --white: #ffffff;
-  --light-blue: #c1bcff;
-  --dark-blue: #9189fc;
+  --light-blue: #e3e0fd;
+  --dark-blue: #c1bcff;
   --background: #f2f2f2;
   --black: #000;
 }
-/* .App {
-  background-color: #f2f2f2;
+/* ..........Progress Bar.......... */
+.progress {
+  height: 10px !important;
+  background: var(--background) !important;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-.profile-container {
-  position: absolute;
-  display: flex;
-  left: 450px;
-  top: 60px;
+.progress-highlight {
+  transition: width 0.15s linear;
+  background: var(--dark-blue);
+  height: 100%;
+  width: 0%;
 }
-.image-container {
-  background-color: #e3e0fd;
-  width: 250px;
-  height: 360px;
-}
-.info-container {
-  background-color: #c1bcff;
-  width: 250px;
-  height: 360px;
-} */
 
 /* ..........Navbar.......... */
 
 .brand-image {
+  margin-top: 3%;
   width: 20rem;
 }
 
 /* ..........Menu Links.......... */
+
 nav a.nav-link {
+  font-weight: bold;
   cursor: pointer;
   letter-spacing: 0.03rem;
 }
@@ -65,7 +69,271 @@ nav ul li {
 .navbar-toggler {
   border: 2px solid var(--dark-blue) !important;
 }
-
 .hamburger {
   color: var(--dark-blue);
+}
+
+/* ..........HomePage.......... */
+.home {
+  max-width: 100%;
+  height: 100vh;
+}
+.empty-box {
+  position: relative;
+  background-color: var(--dark-blue);
+  width: 500px;
+  height: 420px;
+  margin-top: 10vh;
+}
+.profile-container {
+  position: absolute;
+  display: flex;
+  margin-top: 40px;
+  margin-left: 75%;
+}
+.image-container {
+  width: 250px;
+  height: 340px;
+  background-color: var(--light-blue) !important;
+  text-align: center;
+  text-transform: uppercase;
+}
+.info-container {
+  background-color: var(--dark-blue);
+  width: 250px;
+  height: 340px;
+}
+
+/* ..........Profile Picture.......... */
+
+.profile-image {
+  display: block;
+  margin: auto;
+  margin-top: 37.5px;
+  border: 2px solid var(--dark-blue);
+  border-radius: 50% !important;
+  width: 150px !important;
+  height: 150px;
+}
+.name {
+  margin-top: 25px;
+  font-weight: bolder;
+  letter-spacing: 0.03rem;
+}
+p.degree {
+  margin: 10px;
+  letter-spacing: 0.1rem;
+}
+hr {
+  margin-top: 17px !important;
+  border: 2px solid var(--dark-blue) !important;
+  width: 50%;
+}
+.socail-media {
+}
+.info1 {
+  margin-top: 37.5px;
+  margin-left: 10px;
+  font-size: 72px;
+  color: var(--white);
+  font-weight: bolder !important;
+}
+.info2 {
+  margin-left: 10px;
+}
+.resume {
+  position: relative;
+  text-align: center;
+  background-color: var(--light-blue);
+  border-radius: 35px;
+  text-transform: uppercase;
+}
+.aboutme,
+.workexperience,
+.myprojects,
+.contactme {
+  max-width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+/* ..........Contact Me Page.......... */
+.base-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  margin-top: 8px;
+  font-size: 48px;
+  text-transform: uppercase;
+  color: var(--dark-blue);
+}
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.image-c {
+  width: 100%;
+  height: 200px;
+}
+.image {
+  width: auto;
+  height: 180px;
+  margin: 10px;
+}
+.para {
+  margin: 10px;
+}
+
+.form {
+  margin-top: 10px;
+  display: flex;
+}
+.form1 {
+  left: 0px;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+label {
+  font-size: 20px;
+  color: var(--black);
+  margin: 0px !important;
+}
+input,
+textarea {
+  display: inline-block;
+  text-align: left;
+  margin-left: 5px !important;
+  min-width: 18em;
+  height: 37px;
+  padding: 0px 10px;
+  background-color: var(--light-blue);
+  border: 1 solid var(--dark-blue) !important;
+  border-radius: 30px;
+  scroll-margin-bottom: 31px;
+  transition: all 250ms ease-in-out;
+}
+textarea {
+  height: 150px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0px 0px 12px 0.8px var(--dark-blue);
+  background-color: var(--dark-blue);
+}
+
+.btn {
+  font-size: 21px;
+  padding: 5px 20px;
+  border: 2px solid var(--dark-blue) !important;
+  border-radius: 30px !important;
+  transition: all 250ms ease-in-out;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--dark-blue);
+}
+
+input.error {
+  border: 1px solid red;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 0.75em;
+}
+
+.vl {
+  border-left: 2px solid var(--dark-blue);
+  height: 150px;
+  position: absolute;
+  left: 50%;
+}
+
+/* ..........Contact Me Page.......... */
+.card {
+  margin: auto;
+  background-color: red;
+}
+
+.card1 {
+  margin-top: 39%;
+}
+
+#left-box {
+  float: left;
+
+  width: 25%;
+  height: 280px;
+}
+#middle-box {
+  float: left;
+  /* background:Green; */
+  width: 25%;
+  height: 280px;
+}
+#right-box {
+  float: left;
+  width: 25%;
+  height: 280px;
+}
+#right {
+  float: left;
+  width: 25%;
+  height: 280px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  box-shadow: 7px 7px 7px grey;
+  width: 300px;
+  height: 430px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/* .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+} */
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
 }
